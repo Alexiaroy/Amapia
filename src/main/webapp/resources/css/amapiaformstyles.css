@@ -1,0 +1,9 @@
+/* FORM STYLES */
+
+form .form-control {
+    border-radius: 20px;
+    border: 1px solid var(--olivine);
+    padding: 10px;
+}
+
+/* ------------------------------------------------------- */

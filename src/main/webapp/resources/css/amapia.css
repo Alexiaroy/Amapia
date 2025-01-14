@@ -1,0 +1,524 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* COLOR STYLES */
+
+/* Colors */
+:root {
+	--resedaGreen: #738D64;
+	--olivine: #99BC85;
+	--teaGreen: #CFE3C5;
+	--honeyDew: #E1F0DA;
+	--eggshell: #F3F0DB;
+	--babyPowder: #F9F8F1;
+	--black: #181818;
+	--white: #FAFAFA;
+}
+
+body {
+	margin-top: 76px;
+}
+
+/* ------------------------------------------------------- */
+
+/* LANDING STYLES */
+
+.amapia-text {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0px 0px 0px 40px;
+}
+
+h1 {
+	font-weight: 500;
+}
+
+.amapia-p {
+	font-weight: 500;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	width: 80%;
+	color: var(--black);
+}
+
+@media (max-width: 1030px) {
+	.amapia-p {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-right: 18px;
+    }
+}
+
+
+/* ------------------------------------------------------- */
+
+/* INFINITE LOGO STYLES */
+.wrapper {
+	background-color: var(--teaGreen);
+	width: 100%;
+	height: 60px;
+	margin-inline: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+@keyframes scrollleft {
+	to {
+	left:-80px;
+}
+
+}
+.logo-item {
+	width: 80px;
+	margin: 0 50px;
+	left: max(calc(80px * 8), 100%);
+	position: absolute;
+	animation-name: scrollleft;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.item1 {
+	animation-delay: calc(30s/ 6 * ( 6 - 1)* -1);
+}
+
+.item2 {
+	animation-delay: calc(30s/ 6 * ( 6 - 2)* -1);
+}
+
+.item3 {
+	animation-delay: calc(30s/ 6 * ( 6 - 3)* -1);
+}
+
+.item4 {
+	animation-delay: calc(30s/ 6 * ( 6 - 4)* -1);
+}
+
+.item5 {
+	animation-delay: calc(30s/ 6 * ( 6 - 5)* -1);
+}
+
+.item6 {
+	animation-delay: calc(30s/ 6 * ( 6 - 6)* -1);
+}
+
+/* ------------------------------------------------------- */
+
+/* ACCORDION STYLES */
+
+.amapia-features * {
+	background-color: var(--white);
+}
+
+.amapia-features h1 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	margin: 4%;
+}
+
+.amapia-features .accordion {
+	width: 100%;
+}
+
+.amapia-features .card {
+	border: none;
+	position: relative;
+	margin: 1% 10%;
+	padding: 0;
+	display: flex;
+	background-color: var(--white);
+}
+
+.amapia-features .card-header {
+	border: none;
+	color: var(--black);
+	background-color: var(--white);
+	position: relative;
+}
+
+.amapia-features .btn-link {
+	color: var(--black);
+	font-weight: 600;
+	font-size: 1.2rem;
+	white-space: normal;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.amapia-features .card-body{
+	position: relative;
+	background-color: var(--white);
+}
+
+.amapia-features img {
+	margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+
+/* Line on the left of header and body */
+.amapia-features .card-header::before,
+.amapia-features .card-body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: grey;
+}
+
+/* Line color when expanded */
+.amapia-features .card.expanded .card-header::before,
+.amapia-features .card.expanded .card-body::before {
+    background-color: var(--black); 
+}
+
+
+/* actions */
+.amapia-features .btn-link:hover,
+.amapia-features .btn-link:focus,
+.amapia-features .btn-link:active {
+	text-decoration: none;
+}
+
+
+@media (min-width: 1030px) {
+    .amapia-features img {
+        max-width: 60%; 
+    }
+}
+
+
+/* ------------------------------------------------------- */
+
+/* SUBSCRIPTIONS STYLES */
+
+.amapia-subscriptions {
+  background-image: url('../images/forfaits-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; 
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+.amapia-subscriptions h1 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	margin: 4%;
+}
+
+.amapia-subscriptions h2, 
+.amapia-subscriptions h3 {
+	text-align: center;
+	padding: 50px;
+	text-transform: uppercase;
+}
+
+.amapia-subscriptions .cards {
+		display: flex;
+	padding: 50px;
+}
+
+.amapia-subscriptions .card {
+	background-color: #fff;
+	width: 300px;
+	height: 500px;
+	margin: 0 auto;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-mobile {
+	display: none;
+}
+
+.amapia-subscriptions .bg-color-linear {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#ribbon-img {
+	position: absolute;
+	left: -23px;
+	z-index: 1;
+}
+
+.price {
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	color: white;
+	font-weight: bold !important;
+	font-size: 16px;
+	z-index: 2;
+	text-align: center;
+}
+
+.amapia-subscriptions .title {
+	font-size: 24px;
+	color: #2196f3;
+	margin-bottom: 15px;
+}
+
+.amapia-subscriptions p {
+	font-weight: 300 !important;
+	font-size: 16px;
+}
+
+.amapia-subscriptions .active {
+	color: #37482D !important;
+	font-weight: bold !important;
+	font-size: 20px !important;
+}
+
+.amapia-subscriptions .nav-item>.active {
+	border-bottom: 1px green solid !important;
+}
+
+.amapia-subscriptions .nav {
+	background-color: #F9F8F1 !important;
+	display: flex;
+	justify-content: space-around;
+}
+
+.amapia-subscriptions .disabled {
+	color: #80B95F !important;
+	font-size: 20px !important;
+}
+
+.amapia-subscriptions .label-title-sub {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+.amapia-subscriptions .color-id-1 {
+	background: linear-gradient(to right, #80B95F 0%, #7CE73E 57%, #698A56 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.amapia-subscriptions .color-id-2 {
+	background: linear-gradient(to right, #55A1CF 0%, #25D0FF 57%, #3387CC 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.amapia-subscriptions .color-id-3 {
+	background: linear-gradient(to right, #ED9837 0%, #F8BC3C 57%, #DB8B30 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.amapia-subscriptions .list-items {
+	margin-top: 50px;
+	padding-left: 10px;
+}
+
+.amapia-subscriptions .button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.amapia-subscriptions .btn-next {
+	color: #000;
+	background-color: #99BC85;
+	text-align: center;
+	padding: 3px;
+	width: 200px;
+	margin-top: 50px;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 15px;
+	border: none;
+	height: 35px;
+}
+
+.amapia-subscriptions .button-previous {
+	color: #000;
+	background-color: #fff;
+	text-align: center;
+	padding: 3px;
+	width: 200px;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 15px;
+	border: 2px #c0c0c0 solid;
+	margin-right: 8px;
+	height: 35px;
+}
+
+.amapia-subscriptions .form-signup {
+	display: flex;
+	flex-direction: column;
+}
+
+.amapia-subscriptions .form-group-signup {
+	display: flex;
+	justify-content: space-around;
+}
+
+.amapia-subscriptions .input-signup {
+	width: 300px;
+	border: 1px #D9D9D9 solid;
+	border-radius: 8px;
+	padding: 3px;
+}
+
+@media ( max-width : 1030px) {
+	.amapia-subscriptions .cards {
+		display: none;
+	}
+	.amapia-subscriptions .carousel-mobile {
+		display: block;
+		padding: 50px;
+	}
+	.amapia-subscriptions .button-container {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.amapia-subscriptions .form-signup {
+		align-items: center;
+	}
+	.amapia-subscriptions .form-group-signup {
+		flex-direction: column;
+	}
+}
+
+/* CONTACT STYLES */
+.amapia-contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+    border-radius: 20px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08); 
+    background-color: var(--white);
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.amapia-contact .contact-form {
+    width: 100%;
+}
+
+.contact-form .form-group {
+    width: 100%;
+}
+
+.contact-form .form-control {
+    width: 100%;
+}
+
+.contact-form .btn-amapia {
+	margin-top: 20px;
+}
+
+/* Contact Desktop View */
+.contact-wrapper {
+    background-image: url('../images/contact-background.svg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Sidebar and Contact Form */
+.contact-wrapper .contact-sidebar {
+    padding: 2rem;
+    text-align: left;
+}
+
+.contact-wrapper .contact-sidebar .contact-icon {
+	width: 10%;
+}
+
+.contact-wrapper .amapia-contact {
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 1rem; 
+}
+
+.contact-info .contact-icon {
+    width: 30px; 
+    margin-right: 10px; 
+}
+
+.contact-info p {
+    margin: 0; 
+}
+
+/* Remove background on small screens */
+@media (max-width: 1030px) {
+    .contact-wrapper {
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .contact-wrapper .amapia-contact {
+        border-radius: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-wrapper .contact-sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 1030px) {
+    .amapia-contact h2 {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+    	margin-top: 0;
+    }
+}
+/* ------------------------------------------------------- */

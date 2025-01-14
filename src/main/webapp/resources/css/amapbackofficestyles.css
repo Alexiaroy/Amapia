@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+.card{
+	transform: scale(1);
+	transition: transform 0.4s ease;
+	width:250px;
+	height:370px;
+}
+
+.card:hover{
+	transform: scale(1.05);
+}
+
+.card-number{
+font-family: 'Poppins';
+font-weight: 400;
+font-size: 100px;
+}
+
+.black-svg path{
+	fill: #1E1E1E !important;
+}
+
+/* Basic */
+.basic-style {
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(90deg, #80B95F 0%, #7CE73E 57.5%, #698A56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Standard */
+.standard-style {
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(90deg, #55A1CF 0%, #25D0FF 53.5%, #3387CC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Premium */
+.premium-style {
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(90deg, #ED9837 0%, #F8BC3C 50%, #DB8B30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Image form */
+
+.image-preview {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+.image-preview img,
+.image-preview #existingImage1,
+.image-preview #existingImage2,
+.image-preview #existingImage3 {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-picker {
+width: 100%;
+}
+
+.color-div{
+	height:50px; 
+	width:100%;
+	border: solid 1px grey;
+}

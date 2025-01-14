@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	margin:0;
+}
+
+.button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.btn-next {
+	color: #000;
+	background-color: #99BC85;
+	text-align: center;
+	padding: 3px;
+	width: 200px;
+	margin-top: 50px;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 15px;
+	border: none;
+	height: 35px;
+}
+
+.container h2 {
+	font-weight: 400;
+	font-size: 2rem;
+	padding: 0;
+}
+
+.container hr {
+	max-width: 30%;
+	margin: 20px auto;
+}
+
+.login-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.login-box .connection {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+footer p {
+	font-weight: 400 !important;
+}
+
